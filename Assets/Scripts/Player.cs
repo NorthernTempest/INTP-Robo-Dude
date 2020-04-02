@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+	public Animator animator;
+
 	public float speed = 1;
 	public float rotationSpeed = 1;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -23,10 +19,14 @@ public class Player : MonoBehaviour
 	{
 		Turn();
 
-		float strafe = Input.GetAxis( "Horizontal" ) * Time.deltaTime * speed;
-		float forward = Input.GetAxis( "Vertical" ) * Time.deltaTime * speed;
+		float strafe = Input.GetAxis( "Horizontal" );
+		float forward = Input.GetAxis( "Vertical" );
+		
+		transform.Translate(new Vector3(strafe, 0, forward ) * Time.deltaTime * speed );
 
-		transform.Translate(new Vector3(strafe, 0, forward));
+		animator.SetFloat( "Forward", forward );
+		animator.SetFloat( "Left", -strafe );
+		animator.SetFloat( "Move", Mathf.Abs( forward ) + Mathf.Abs( strafe ) );
 	}
 
 	void Turn()
