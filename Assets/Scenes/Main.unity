@@ -281,6 +281,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 320b1c2af77554f99a1658df4a6d3d5c, type: 3}
   m_PrefabInstance: {fileID: 376481214}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &443828887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 320b1c2af77554f99a1658df4a6d3d5c, type: 3}
+  m_PrefabInstance: {fileID: 376481214}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &443828888
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443828887}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2327fdbb8411534438b39c4f81bbe2c2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &542814942
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   turnSpeed: 2
+  anim: {fileID: 443828888}
 --- !u!1 &1480382723
 GameObject:
   m_ObjectHideFlags: 0
